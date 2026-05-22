@@ -4,3 +4,6 @@ Thumbs.db
 .idea/
 .claude/
 *.local
+dist/
+node_modules/
+package-lock.json

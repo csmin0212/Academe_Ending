@@ -11,7 +11,7 @@
 //  ※ Firebase 클라이언트 키는 공개 설계이므로 git 커밋 가능합니다.
 // ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-const firebaseConfig = {
+export const firebaseConfig = {
     apiKey:            '',
     authDomain:        '',
     databaseURL:       '',   // 필수! 예: 'https://xxx-default-rtdb.firebaseio.com'

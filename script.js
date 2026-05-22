@@ -1,4 +1,6 @@
-// ── Theme ────────────────────────────────────────────────────
+import { firebaseConfig } from './config.js'
+
+// ── Theme ─────────────────────────────────────────────────
 const html = document.documentElement
 
 function initTheme() {
@@ -16,21 +18,20 @@ function toggleTheme() {
     applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark')
 }
 
-// ── Navigation ───────────────────────────────────────────────
+// ── Navigation ───────────────────────────────────────────
 function showPage(pageId, navEl) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
     const target = document.getElementById('page-' + pageId)
     if (target) target.classList.add('active')
 
     document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'))
-    // navEl 직접 전달 또는 data-page 속성으로 자동 탐색
     const activeNav = navEl || document.querySelector(`.nav-item[data-page="${pageId}"]`)
     if (activeNav) activeNav.classList.add('active')
 
     window.scrollTo(0, 0)
 }
 
-// ── Unlock UI ────────────────────────────────────────────────
+// ── Unlock UI ─────────────────────────────────────────────
 function applyUnlock(id, unlocked) {
     const body = document.getElementById('ul-' + id)
     const btn  = document.getElementById('ulbtn-' + id)
@@ -54,24 +55,24 @@ function setSyncStatus(online) {
     text.textContent = online ? '동기화 연결됨' : '로컬 모드'
 }
 
-// ── Firebase ─────────────────────────────────────────────────
-function initFirebase() {
-    const configured = typeof firebaseConfig !== 'undefined'
-        && firebaseConfig.apiKey
-        && firebaseConfig.databaseURL
+// ── Firebase ─────────────────────────────────────────────
+let _db = null
 
-    if (!configured || typeof firebase === 'undefined') {
+async function initFirebase() {
+    if (!firebaseConfig.apiKey || !firebaseConfig.databaseURL) {
         loadFromLocalStorage()
         setSyncStatus(false)
         return
     }
 
     try {
-        firebase.initializeApp(firebaseConfig)
-        const db = firebase.database()
-        window._db = db
+        const { initializeApp }             = await import('firebase/app')
+        const { getDatabase, ref, onValue } = await import('firebase/database')
 
-        db.ref('unlocks').on('value', snap => {
+        const app = initializeApp(firebaseConfig)
+        _db = getDatabase(app)
+
+        onValue(ref(_db, 'unlocks'), snap => {
             const data = snap.val() || {}
             document.querySelectorAll('.unlock-body').forEach(el => {
                 const id = el.id.replace('ul-', '')
@@ -98,11 +99,11 @@ function loadFromLocalStorage() {
 }
 
 async function toggleUnlock(id) {
-    const db = window._db
-    if (db) {
-        const ref  = db.ref('unlocks/' + id)
-        const snap = await ref.once('value')
-        snap.val() ? await ref.remove() : await ref.set(true)
+    if (_db) {
+        const { ref, get, set, remove } = await import('firebase/database')
+        const unlockRef = ref(_db, 'unlocks/' + id)
+        const snap = await get(unlockRef)
+        snap.val() ? await remove(unlockRef) : await set(unlockRef, true)
     } else {
         const body = document.getElementById('ul-' + id)
         if (!body) return
@@ -112,7 +113,7 @@ async function toggleUnlock(id) {
     }
 }
 
-// ── AS (Another Style) — 개별 페이지 탭 전환 ─────────────────
+// ── AS (Another Style) — 페이지 탭 전환 ─────────────────
 const CHARS = ['nelly', 'chloe', 'yuzu', 'garnet']
 
 function setPageAS(charId, on) {
@@ -133,9 +134,15 @@ function initASStates() {
     })
 }
 
-// ── Init ─────────────────────────────────────────────────────
+// ── Init ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
     initTheme()
     initFirebase()
     initASStates()
 })
+
+// inline onclick 핸들러에 노출
+window.showPage     = showPage
+window.toggleTheme  = toggleTheme
+window.toggleUnlock = toggleUnlock
+window.setPageAS    = setPageAS
