@@ -74,27 +74,24 @@
 <main class="main">
 
 <!-- ════════════════════════════════════════════════════════
-     홈 — 메인 대시보드
+     홈
 ════════════════════════════════════════════════════════ -->
 <div class="page active" id="page-home">
-
     <div class="home-hero">
         <div class="home-hero-eyebrow">TRPG Campaign Wiki · 에린딜</div>
         <h1 class="home-hero-title">아리안로드 아카데미<br>엔딩 파티</h1>
         <p class="home-hero-sub">파편을 지닌 자들이 세계를 흔들고, 용사들이 그 흐름의 한가운데 서 있다.</p>
     </div>
-
     <div class="content">
 
-        <!-- ── 용사 파티 ── -->
         <div class="home-sec-head">
             <span class="home-sec-title">용사 파티 <span class="home-sec-count">4</span></span>
             <button class="home-sec-link" onclick="showPage('party')">전체 보기 →</button>
         </div>
-
         <div class="roster-grid">
             <div class="roster-card" style="--char-color:#c8a96e" onclick="showPage('char-nelly')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#2a2010,#1a1a08);">
+                    <img src="/img/nelly.jpg" alt="넬리 가우스" onerror="this.style.display='none'">
                     <span class="roster-initial">넬</span>
                 </div>
                 <div class="roster-footer">
@@ -102,9 +99,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
             <div class="roster-card" style="--char-color:#70c8d0" onclick="showPage('char-chloe')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#0e1e2a,#081820);">
+                    <img src="/img/chloe.jpg" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
                     <span class="roster-initial">클</span>
                 </div>
                 <div class="roster-footer">
@@ -112,9 +109,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
             <div class="roster-card" style="--char-color:#c070d0" onclick="showPage('char-yuzu')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#1a0e28,#12081e);">
+                    <img src="/img/yuzu.jpg" alt="유즈 R 디아스타" onerror="this.style.display='none'">
                     <span class="roster-initial">유</span>
                 </div>
                 <div class="roster-footer">
@@ -122,9 +119,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
             <div class="roster-card" style="--char-color:#d07070" onclick="showPage('char-garnet')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#2a0e0e,#1e0808);">
+                    <img src="/img/garnet.jpg" alt="가넷 에버크레스트" onerror="this.style.display='none'">
                     <span class="roster-initial">가</span>
                 </div>
                 <div class="roster-footer">
@@ -134,26 +131,14 @@
             </div>
         </div>
 
-        <!-- ── 세계 현황 ── -->
         <div class="home-sec-head home-sec-spaced">
             <span class="home-sec-title">세계 현황</span>
         </div>
-
         <div class="stat-row">
-            <div class="stat-box">
-                <div class="stat-num">5</div>
-                <div class="stat-label">마왕 후보</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-num">2</div>
-                <div class="stat-label">사망 확인</div>
-            </div>
-            <div class="stat-box">
-                <div class="stat-num">3</div>
-                <div class="stat-label">행방 불명</div>
-            </div>
+            <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">마왕 후보</div></div>
+            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">사망 확인</div></div>
+            <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">행방 불명</div></div>
         </div>
-
         <div class="card">
             <div class="card-head"><div class="card-title">세계 개요</div></div>
             <div class="card-body">
@@ -175,70 +160,56 @@
     </div>
     <div class="content">
         <div class="frag-grid">
-
             <div class="frag-card" onclick="showPage('kato')">
                 <div class="frag-head">
                     <div><div class="frag-name">카토 미노리</div><div class="frag-god">공포의 신 트리알락의 권속</div></div>
                     <span class="badge badge-unknown">행방불명</span>
                 </div>
                 <div class="power-row"><span>파편</span>
-                    <div class="pdots">
-                        <div class="pdot on"></div><div class="pdot on"></div>
-                        <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
-                    </div><span>최소 2 / 7</span>
+                    <div class="pdots"><div class="pdot on"></div><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                    <span>최소 2 / 7</span>
                 </div>
             </div>
-
             <div class="frag-card" onclick="showPage('yukimori')">
                 <div class="frag-head">
                     <div><div class="frag-name">유키모리 스미레</div><div class="frag-god">욕망의 여신 마하디르그의 권속</div></div>
                     <span class="badge badge-unknown">행방불명</span>
                 </div>
                 <div class="power-row"><span>파편</span>
-                    <div class="pdots">
-                        <div class="pdot on"></div><div class="pdot on"></div>
-                        <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
-                    </div><span>최소 2 / 7</span>
+                    <div class="pdots"><div class="pdot on"></div><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                    <span>최소 2 / 7</span>
                 </div>
             </div>
-
             <div class="frag-card" onclick="showPage('morgoth')">
                 <div class="frag-head">
                     <div><div class="frag-name">모르고트</div><div class="frag-god">증오의 신 크롬 크루의 권속</div></div>
                     <span class="badge badge-unknown">행방불명</span>
                 </div>
                 <div class="power-row"><span>파편</span>
-                    <div class="pdots">
-                        <div class="pdot on"></div>
-                        <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
-                    </div><span>최소 1 / 7</span>
+                    <div class="pdots"><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                    <span>최소 1 / 7</span>
                 </div>
             </div>
-
             <div class="frag-card" onclick="showPage('kasukabe')">
                 <div class="frag-head">
                     <div><div class="frag-name">카스카베 하루</div><div class="frag-god">질투의 여신 모리안의 권속</div></div>
                     <span class="badge badge-dead">사망</span>
                 </div>
                 <div class="power-row"><span>파편</span>
-                    <div class="pdots">
-                        <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
-                    </div><span>0 / 7 (사망)</span>
+                    <div class="pdots"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                    <span>0 / 7 (사망)</span>
                 </div>
             </div>
-
             <div class="frag-card" onclick="showPage('sato')">
                 <div class="frag-head">
                     <div><div class="frag-name">사토 다이치</div><div class="frag-god">시기의 여신 미발의 권속</div></div>
                     <span class="badge badge-dead">사망</span>
                 </div>
                 <div class="power-row"><span>파편</span>
-                    <div class="pdots">
-                        <div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div>
-                    </div><span>0 / 7 (사망)</span>
+                    <div class="pdots"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                    <span>0 / 7 (사망)</span>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -247,31 +218,49 @@
      카토 미노리
 ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-kato">
-    <div class="page-header"><h2>카토 미노리</h2><div class="sub">공포의 신 트리알락의 권속</div></div>
+    <div class="page-header">
+        <h2>카토 미노리</h2>
+        <div class="sub">공포의 신 트리알락의 권속</div>
+    </div>
     <div class="content">
-        <div class="card">
-            <div class="card-head"><div><div class="card-title">기본 정보</div></div><span class="badge badge-unknown">행방불명</span></div>
-            <div class="card-body">
-                <p><span class="tag">공포의 신</span><span class="tag">트리알락의 권속</span><span class="tag">어션</span><span class="tag">오카 대학</span></p>
-                <div class="power-row"><span>보유 파편</span>
-                    <div class="pdots"><div class="pdot on"></div><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
-                    <span>최소 2 / 7</span>
+        <div class="char-article-wrap">
+
+            <div class="char-infobox">
+                <div class="infobox-portrait" style="background:linear-gradient(160deg,#18182e,#0e0e1c);">
+                    <img src="/img/kato.jpg" alt="카토 미노리" onerror="this.style.display='none'">
+                    <span style="font-size:64px;font-weight:700;color:#8888bb;">카</span>
+                </div>
+                <div class="infobox-name-block">
+                    <div class="infobox-char-name">카토 미노리</div>
+                    <div style="margin-top:6px"><span class="badge badge-unknown">행방불명</span></div>
+                </div>
+                <div class="infobox-stats">
+                    <div class="infobox-stat"><span class="isk">권속</span><span class="isv">공포의 신 트리알락</span></div>
+                    <div class="infobox-stat"><span class="isk">출신</span><span class="isv">어션</span></div>
+                    <div class="infobox-stat"><span class="isk">소속</span><span class="isv">오카 대학 (현재 행방불명)</span></div>
+                </div>
+                <div class="infobox-frags">
+                    <div class="power-row">
+                        <span>파편</span>
+                        <div class="pdots"><div class="pdot on"></div><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                        <span>최소 2 / 7</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-head"><div class="card-title">인물 기록</div></div>
-            <div class="card-body">
-                <p>본래 어션으로써 에린딜에 소환된 인물이지만, 소환 되었을 때부터 마왕의 파편이 맥박치고 있었다.</p>
-                <p>어션들이 모인 집단 <strong class="gold">'오카 대학'</strong>에서, 다른 동료들과 함께 모험가 활동도 했던 흔적이 남아있다.</p>
-                <p>2년 전, <em>'질투의 여신 모리안의 권속 — 카스카베 하루'</em>가 그의 권세를 이끌고 오카 대학을 침공. 그 과정에서 오카 대학은 완전히 파괴되었고, 관련 인물들 대부분이 사망하였다.</p>
-                <p>그 끝에, 마왕으로써의 힘을 완강히 거부하던 카토 미노리는 소중한 동료들을 잃은 충격에 마왕의 힘을 온전히 받아들이고, 카스카베 하루와 삼 일 동안의 접전 끝에 그 심장을 움켜쥐었다.</p>
-                <p>이후 현재는 <strong class="unk">행방 불명</strong> 상태.</p>
-                <div class="unlock-wrap">
-                    <button class="unlock-btn" id="ulbtn-kato" onclick="toggleUnlock('kato')">🔒 추가 정보 해금</button>
-                    <div class="unlock-body" id="ul-kato"><p class="unlock-placeholder">— 해금된 정보가 여기에 표시됩니다 —</p></div>
+
+            <div class="char-article-body">
+                <div class="article-section">
+                    <div class="article-section-title">인물 기록</div>
+                    <div class="article-content">
+                        <p>본래 어션으로써 에린딜에 소환된 인물이지만, 소환 되었을 때부터 마왕의 파편이 맥박치고 있었다.</p>
+                        <p>어션들이 모인 집단 <strong class="gold">'오카 대학'</strong>에서, 다른 동료들과 함께 모험가 활동도 했던 흔적이 남아있다.</p>
+                        <p>2년 전, <em>'질투의 여신 모리안의 권속 — 카스카베 하루'</em>가 그의 권세를 이끌고 오카 대학을 침공. 그 과정에서 오카 대학은 완전히 파괴되었고, 관련 인물들 대부분이 사망하였다.</p>
+                        <p>그 끝에, 마왕으로써의 힘을 완강히 거부하던 카토 미노리는 소중한 동료들을 잃은 충격에 마왕의 힘을 온전히 받아들이고, 카스카베 하루와 삼 일 동안의 접전 끝에 그 심장을 움켜쥐었다.</p>
+                        <p>이후 현재는 <strong class="unk">행방 불명</strong> 상태.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -280,31 +269,49 @@
      유키모리 스미레
 ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-yukimori">
-    <div class="page-header"><h2>유키모리 스미레</h2><div class="sub">욕망의 여신 마하디르그의 권속</div></div>
+    <div class="page-header">
+        <h2>유키모리 스미레</h2>
+        <div class="sub">욕망의 여신 마하디르그의 권속</div>
+    </div>
     <div class="content">
-        <div class="card">
-            <div class="card-head"><div><div class="card-title">기본 정보</div></div><span class="badge badge-unknown">행방불명</span></div>
-            <div class="card-body">
-                <p><span class="tag">욕망의 여신</span><span class="tag">마하디르그의 권속</span><span class="tag">어션</span><span class="tag">그랑펠덴 아카데미</span></p>
-                <div class="power-row"><span>보유 파편</span>
-                    <div class="pdots"><div class="pdot on"></div><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
-                    <span>최소 2 / 7</span>
+        <div class="char-article-wrap">
+
+            <div class="char-infobox">
+                <div class="infobox-portrait" style="background:linear-gradient(160deg,#280e1e,#180810);">
+                    <img src="/img/yukimori.jpg" alt="유키모리 스미레" onerror="this.style.display='none'">
+                    <span style="font-size:64px;font-weight:700;color:#cc8899;">유</span>
+                </div>
+                <div class="infobox-name-block">
+                    <div class="infobox-char-name">유키모리 스미레</div>
+                    <div style="margin-top:6px"><span class="badge badge-unknown">행방불명</span></div>
+                </div>
+                <div class="infobox-stats">
+                    <div class="infobox-stat"><span class="isk">권속</span><span class="isv">욕망의 여신 마하디르그</span></div>
+                    <div class="infobox-stat"><span class="isk">출신</span><span class="isv">어션</span></div>
+                    <div class="infobox-stat"><span class="isk">소속</span><span class="isv">그랑펠덴 아카데미 (현재 행방불명)</span></div>
+                </div>
+                <div class="infobox-frags">
+                    <div class="power-row">
+                        <span>파편</span>
+                        <div class="pdots"><div class="pdot on"></div><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                        <span>최소 2 / 7</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-head"><div class="card-title">인물 기록</div></div>
-            <div class="card-body">
-                <p>본래 어션으로써 에린딜에 소환. <strong class="gold">그랑펠덴 아카데미</strong> 1학년으로 입학도 하였었다.</p>
-                <p>다른 학생들과 잘 어울려 지냈던 것으로 추측.</p>
-                <p>1학년 기말고사 시험 당시에 <em>'시기의 여신 미발의 권속 — 사토 다이치'</em>와 그 권속들이 습격. 물의 시대 이후로 목격된 적 없는 <strong class="gold">'[독안랑] 갈라틴'</strong>과의 협공으로 응수.</p>
-                <p>그 과정에서 함께하였던 다른 학생들은 전이석으로 무사히 탈출.</p>
-                <p>이후 현재는 <strong class="unk">행방 불명</strong> 상태.</p>
-                <div class="unlock-wrap">
-                    <button class="unlock-btn" id="ulbtn-yukimori" onclick="toggleUnlock('yukimori')">🔒 추가 정보 해금</button>
-                    <div class="unlock-body" id="ul-yukimori"><p class="unlock-placeholder">— 해금된 정보가 여기에 표시됩니다 —</p></div>
+
+            <div class="char-article-body">
+                <div class="article-section">
+                    <div class="article-section-title">인물 기록</div>
+                    <div class="article-content">
+                        <p>본래 어션으로써 에린딜에 소환. <strong class="gold">그랑펠덴 아카데미</strong> 1학년으로 입학도 하였었다.</p>
+                        <p>다른 학생들과 잘 어울려 지냈던 것으로 추측.</p>
+                        <p>1학년 기말고사 시험 당시에 <em>'시기의 여신 미발의 권속 — 사토 다이치'</em>와 그 권속들이 습격. 물의 시대 이후로 목격된 적 없는 <strong class="gold">'[독안랑] 갈라틴'</strong>과의 협공으로 응수.</p>
+                        <p>그 과정에서 함께하였던 다른 학생들은 전이석으로 무사히 탈출.</p>
+                        <p>이후 현재는 <strong class="unk">행방 불명</strong> 상태.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -313,29 +320,46 @@
      모르고트
 ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-morgoth">
-    <div class="page-header"><h2>모르고트</h2><div class="sub">증오의 신 크롬 크루의 권속</div></div>
+    <div class="page-header">
+        <h2>모르고트</h2>
+        <div class="sub">증오의 신 크롬 크루의 권속</div>
+    </div>
     <div class="content">
-        <div class="card">
-            <div class="card-head"><div><div class="card-title">기본 정보</div></div><span class="badge badge-unknown">행방불명</span></div>
-            <div class="card-body">
-                <p><span class="tag">증오의 신</span><span class="tag">크롬 크루의 권속</span><span class="tag">세피로트 교단</span><span class="tag">前 추기경</span></p>
-                <div class="power-row"><span>보유 파편</span>
-                    <div class="pdots"><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
-                    <span>최소 1 / 7</span>
+        <div class="char-article-wrap">
+
+            <div class="char-infobox">
+                <div class="infobox-portrait" style="background:linear-gradient(160deg,#220e0e,#140808);">
+                    <img src="/img/morgoth.jpg" alt="모르고트" onerror="this.style.display='none'">
+                    <span style="font-size:64px;font-weight:700;color:#aa6060;">모</span>
+                </div>
+                <div class="infobox-name-block">
+                    <div class="infobox-char-name">모르고트</div>
+                    <div style="margin-top:6px"><span class="badge badge-unknown">행방불명</span></div>
+                </div>
+                <div class="infobox-stats">
+                    <div class="infobox-stat"><span class="isk">권속</span><span class="isv">증오의 신 크롬 크루</span></div>
+                    <div class="infobox-stat"><span class="isk">소속</span><span class="isv">세피로트 교단 前 추기경 (현재 이탈)</span></div>
+                </div>
+                <div class="infobox-frags">
+                    <div class="power-row">
+                        <span>파편</span>
+                        <div class="pdots"><div class="pdot on"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                        <span>최소 1 / 7</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-head"><div class="card-title">인물 기록</div></div>
-            <div class="card-body">
-                <p><strong class="gold">세피로트 교단</strong>의 추기경이었던 자. 본래 완벽한 일처리와 꾸밈 없는 신실함으로 그 위치까지 올라갔다고 하지만.</p>
-                <p><em>'해신의 신전'</em>에서 다른 마족들과 결탁한 점과 더불어, <em>'[물의 성녀] 이사도라'</em>의 증언으로 마왕 후보라는 사실이 공공연하게 밝혀짐.</p>
-                <p>현재는 교단을 이탈하여 <strong class="unk">행방 불명</strong> 상태.</p>
-                <div class="unlock-wrap">
-                    <button class="unlock-btn" id="ulbtn-morgoth" onclick="toggleUnlock('morgoth')">🔒 추가 정보 해금</button>
-                    <div class="unlock-body" id="ul-morgoth"><p class="unlock-placeholder">— 해금된 정보가 여기에 표시됩니다 —</p></div>
+
+            <div class="char-article-body">
+                <div class="article-section">
+                    <div class="article-section-title">인물 기록</div>
+                    <div class="article-content">
+                        <p><strong class="gold">세피로트 교단</strong>의 추기경이었던 자. 본래 완벽한 일처리와 꾸밈 없는 신실함으로 그 위치까지 올라갔다고 하지만.</p>
+                        <p><em>'해신의 신전'</em>에서 다른 마족들과 결탁한 점과 더불어, <em>'[물의 성녀] 이사도라'</em>의 증언으로 마왕 후보라는 사실이 공공연하게 밝혀짐.</p>
+                        <p>현재는 교단을 이탈하여 <strong class="unk">행방 불명</strong> 상태.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -344,28 +368,45 @@
      카스카베 하루
 ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-kasukabe">
-    <div class="page-header"><h2>카스카베 하루</h2><div class="sub">질투의 여신 모리안의 권속</div></div>
+    <div class="page-header">
+        <h2>카스카베 하루</h2>
+        <div class="sub">질투의 여신 모리안의 권속</div>
+    </div>
     <div class="content">
-        <div class="card">
-            <div class="card-head"><div><div class="card-title">기본 정보</div></div><span class="badge badge-dead">사망</span></div>
-            <div class="card-body">
-                <p><span class="tag">질투의 여신</span><span class="tag">모리안의 권속</span><span class="tag">어션</span></p>
-                <div class="power-row"><span>보유 파편</span>
-                    <div class="pdots"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
-                    <span>0 / 7 (사망)</span>
+        <div class="char-article-wrap">
+
+            <div class="char-infobox">
+                <div class="infobox-portrait" style="background:linear-gradient(160deg,#0e180e,#080e08);">
+                    <img src="/img/kasukabe.jpg" alt="카스카베 하루" onerror="this.style.display='none'">
+                    <span style="font-size:64px;font-weight:700;color:#608860;">카</span>
+                </div>
+                <div class="infobox-name-block">
+                    <div class="infobox-char-name">카스카베 하루</div>
+                    <div style="margin-top:6px"><span class="badge badge-dead">사망</span></div>
+                </div>
+                <div class="infobox-stats">
+                    <div class="infobox-stat"><span class="isk">권속</span><span class="isv">질투의 여신 모리안</span></div>
+                    <div class="infobox-stat"><span class="isk">출신</span><span class="isv">어션</span></div>
+                </div>
+                <div class="infobox-frags">
+                    <div class="power-row">
+                        <span>파편</span>
+                        <div class="pdots"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                        <span>0 / 7 (사망)</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-head"><div class="card-title">인물 기록</div></div>
-            <div class="card-body">
-                <p>본래 어션으로써 에린딜에 소환. 주 활동 위치는 에린딜 동방으로, 자세한 활동 내역은 드러난 것이 없음.</p>
-                <p>군세를 모아 오카 대학을 침공, 카토 미노리와 접전 끝에 <strong class="dead">사망</strong>.</p>
-                <div class="unlock-wrap">
-                    <button class="unlock-btn" id="ulbtn-kasukabe" onclick="toggleUnlock('kasukabe')">🔒 추가 정보 해금</button>
-                    <div class="unlock-body" id="ul-kasukabe"><p class="unlock-placeholder">— 해금된 정보가 여기에 표시됩니다 —</p></div>
+
+            <div class="char-article-body">
+                <div class="article-section">
+                    <div class="article-section-title">인물 기록</div>
+                    <div class="article-content">
+                        <p>본래 어션으로써 에린딜에 소환. 주 활동 위치는 에린딜 동방으로, 자세한 활동 내역은 드러난 것이 없음.</p>
+                        <p>군세를 모아 오카 대학을 침공, 카토 미노리와 접전 끝에 <strong class="dead">사망</strong>.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -374,30 +415,47 @@
      사토 다이치
 ════════════════════════════════════════════════════════ -->
 <div class="page" id="page-sato">
-    <div class="page-header"><h2>사토 다이치</h2><div class="sub">시기의 여신 미발의 권속</div></div>
+    <div class="page-header">
+        <h2>사토 다이치</h2>
+        <div class="sub">시기의 여신 미발의 권속</div>
+    </div>
     <div class="content">
-        <div class="card">
-            <div class="card-head"><div><div class="card-title">기본 정보</div></div><span class="badge badge-dead">사망</span></div>
-            <div class="card-body">
-                <p><span class="tag">시기의 여신</span><span class="tag">미발의 권속</span><span class="tag">어션</span></p>
-                <div class="power-row"><span>보유 파편</span>
-                    <div class="pdots"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
-                    <span>0 / 7 (사망)</span>
+        <div class="char-article-wrap">
+
+            <div class="char-infobox">
+                <div class="infobox-portrait" style="background:linear-gradient(160deg,#18180e,#100e08);">
+                    <img src="/img/sato.jpg" alt="사토 다이치" onerror="this.style.display='none'">
+                    <span style="font-size:64px;font-weight:700;color:#888860;">사</span>
+                </div>
+                <div class="infobox-name-block">
+                    <div class="infobox-char-name">사토 다이치</div>
+                    <div style="margin-top:6px"><span class="badge badge-dead">사망</span></div>
+                </div>
+                <div class="infobox-stats">
+                    <div class="infobox-stat"><span class="isk">권속</span><span class="isv">시기의 여신 미발</span></div>
+                    <div class="infobox-stat"><span class="isk">출신</span><span class="isv">어션</span></div>
+                </div>
+                <div class="infobox-frags">
+                    <div class="power-row">
+                        <span>파편</span>
+                        <div class="pdots"><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div><div class="pdot"></div></div>
+                        <span>0 / 7 (사망)</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="card">
-            <div class="card-head"><div class="card-title">인물 기록</div></div>
-            <div class="card-body">
-                <p>본래 어션으로써 에린딜에 소환.</p>
-                <p><strong class="gold">그랑펠덴 아카데미</strong>에 입학 신청서를 냈었지만, 인성 문제로 탈락. 당시 면접관의 기록에 의하면 <em>'히로인 100명 만들려고 아카데미에 왔다'</em>라고...</p>
-                <p>이후 한 동안 모습을 드러내지 않다가, 군세를 이끌고 아카데미 1학년 기말고사에 난입. 유키모리 스미레 및 학생 3인과 접전.</p>
-                <p>이후 <strong class="dead">사망</strong>.</p>
-                <div class="unlock-wrap">
-                    <button class="unlock-btn" id="ulbtn-sato" onclick="toggleUnlock('sato')">🔒 추가 정보 해금</button>
-                    <div class="unlock-body" id="ul-sato"><p class="unlock-placeholder">— 해금된 정보가 여기에 표시됩니다 —</p></div>
+
+            <div class="char-article-body">
+                <div class="article-section">
+                    <div class="article-section-title">인물 기록</div>
+                    <div class="article-content">
+                        <p>본래 어션으로써 에린딜에 소환.</p>
+                        <p><strong class="gold">그랑펠덴 아카데미</strong>에 입학 신청서를 냈었지만, 인성 문제로 탈락. 당시 면접관의 기록에 의하면 <em>'히로인 100명 만들려고 아카데미에 왔다'</em>라고...</p>
+                        <p>이후 한 동안 모습을 드러내지 않다가, 군세를 이끌고 아카데미 1학년 기말고사에 난입. 유키모리 스미레 및 학생 3인과 접전.</p>
+                        <p>이후 <strong class="dead">사망</strong>.</p>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </div>
@@ -412,9 +470,9 @@
     </div>
     <div class="content">
         <div class="roster-grid">
-
             <div class="roster-card" style="--char-color:#c8a96e" onclick="showPage('char-nelly')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#2a2010,#1a1a08);">
+                    <img src="/img/nelly.jpg" alt="넬리 가우스" onerror="this.style.display='none'">
                     <span class="roster-initial">넬</span>
                 </div>
                 <div class="roster-footer">
@@ -422,9 +480,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
             <div class="roster-card" style="--char-color:#70c8d0" onclick="showPage('char-chloe')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#0e1e2a,#081820);">
+                    <img src="/img/chloe.jpg" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
                     <span class="roster-initial">클</span>
                 </div>
                 <div class="roster-footer">
@@ -432,9 +490,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
             <div class="roster-card" style="--char-color:#c070d0" onclick="showPage('char-yuzu')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#1a0e28,#12081e);">
+                    <img src="/img/yuzu.jpg" alt="유즈 R 디아스타" onerror="this.style.display='none'">
                     <span class="roster-initial">유</span>
                 </div>
                 <div class="roster-footer">
@@ -442,9 +500,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
             <div class="roster-card" style="--char-color:#d07070" onclick="showPage('char-garnet')">
                 <div class="roster-portrait" style="background:linear-gradient(160deg,#2a0e0e,#1e0808);">
+                    <img src="/img/garnet.jpg" alt="가넷 에버크레스트" onerror="this.style.display='none'">
                     <span class="roster-initial">가</span>
                 </div>
                 <div class="roster-footer">
@@ -452,7 +510,6 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -475,15 +532,16 @@
   </div>
   <div class="content">
     <div class="char-article-wrap">
-
       <div class="char-infobox">
         <div class="pg-default">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#2a2010,#1a1a08);">
+            <img src="/img/nelly.jpg" alt="넬리 가우스" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#c8a96e;">넬</span>
           </div>
         </div>
         <div class="pg-as">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
+            <img src="/img/nelly-as.jpg" alt="넬리 가우스 A.S" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#8888dd;">넬</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
@@ -505,7 +563,6 @@
           <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
         </div>
       </div>
-
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
@@ -538,7 +595,6 @@
           <div class="traits-tbd">— 추후 추가 예정 —</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -561,15 +617,16 @@
   </div>
   <div class="content">
     <div class="char-article-wrap">
-
       <div class="char-infobox">
         <div class="pg-default">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#0e1e2a,#081820);">
+            <img src="/img/chloe.jpg" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#70c8d0;">클</span>
           </div>
         </div>
         <div class="pg-as">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
+            <img src="/img/chloe-as.jpg" alt="클로이 A.S" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#8888dd;">클</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
@@ -591,7 +648,6 @@
           <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
         </div>
       </div>
-
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
@@ -624,7 +680,6 @@
           <div class="traits-tbd">— 추후 추가 예정 —</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -647,15 +702,16 @@
   </div>
   <div class="content">
     <div class="char-article-wrap">
-
       <div class="char-infobox">
         <div class="pg-default">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a0e28,#12081e);">
+            <img src="/img/yuzu.jpg" alt="유즈 R 디아스타" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#c070d0;">유</span>
           </div>
         </div>
         <div class="pg-as">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
+            <img src="/img/yuzu-as.jpg" alt="유즈 A.S" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#8888dd;">유</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
@@ -677,7 +733,6 @@
           <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
         </div>
       </div>
-
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
@@ -710,7 +765,6 @@
           <div class="traits-tbd">— 추후 추가 예정 —</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>
@@ -733,15 +787,16 @@
   </div>
   <div class="content">
     <div class="char-article-wrap">
-
       <div class="char-infobox">
         <div class="pg-default">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#2a0e0e,#1e0808);">
+            <img src="/img/garnet.jpg" alt="가넷 에버크레스트" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#d07070;">가</span>
           </div>
         </div>
         <div class="pg-as">
           <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
+            <img src="/img/garnet-as.jpg" alt="가넷 A.S" onerror="this.style.display='none'">
             <span style="font-size:64px;font-weight:700;color:#8888dd;">가</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
@@ -763,7 +818,6 @@
           <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
         </div>
       </div>
-
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
@@ -796,7 +850,6 @@
           <div class="traits-tbd">— 추후 추가 예정 —</div>
         </div>
       </div>
-
     </div>
   </div>
 </div>

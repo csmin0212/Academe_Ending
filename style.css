@@ -761,7 +761,7 @@ strong.gold  { color: var(--accent); }
 .infobox-stats { padding: 4px 0; }
 .infobox-stat {
     display: flex;
-    align-items: baseline;
+    align-items: flex-start;
     gap: 6px;
     padding: 5px 12px;
     border-bottom: 1px solid var(--border-in);
@@ -769,7 +769,7 @@ strong.gold  { color: var(--accent); }
 }
 .infobox-stat:last-child { border-bottom: none; }
 .isk { color: var(--text-4); min-width: 28px; flex-shrink: 0; }
-.isv { color: var(--text-2); }
+.isv { color: var(--text-2); word-break: keep-all; line-height: 1.5; }
 
 /* Article body */
 .char-article-body { /* flows around float */ }
@@ -832,3 +832,30 @@ strong.gold  { color: var(--accent); }
     padding: 20px 0;
     text-align: center;
 }
+
+/* ── 인포박스 — 파편 행 (마왕 캐릭터 전용) ────────────── */
+.infobox-frags {
+    padding: 8px 12px 10px;
+    border-top: 1px solid var(--border-in);
+}
+.infobox-frags .power-row {
+    margin-top: 0;
+    flex-wrap: wrap;
+    row-gap: 4px;
+}
+
+/* ── 아티클 본문 단락 간격 ──────────────────────────── */
+.article-content p { font-size: 13.5px; line-height: 1.9; color: var(--text-2); }
+.article-content p + p { margin-top: 10px; }
+
+/* ── 로스터 카드 이미지 지원 ──────────────────────────── */
+.roster-portrait { position: relative; overflow: hidden; }
+.roster-portrait img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    z-index: 1;
+}
+.roster-initial { position: relative; z-index: 0; }
