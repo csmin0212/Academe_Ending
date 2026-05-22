@@ -21,12 +21,16 @@ function showPage(pageId, navEl) {
     document.querySelectorAll('.page').forEach(p => p.classList.remove('active'))
     const target = document.getElementById('page-' + pageId)
     if (target) target.classList.add('active')
+
     document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'))
-    if (navEl) navEl.classList.add('active')
+    // navEl 직접 전달 또는 data-page 속성으로 자동 탐색
+    const activeNav = navEl || document.querySelector(`.nav-item[data-page="${pageId}"]`)
+    if (activeNav) activeNav.classList.add('active')
+
     window.scrollTo(0, 0)
 }
 
-// ── Unlock UI helpers ────────────────────────────────────────
+// ── Unlock UI ────────────────────────────────────────────────
 function applyUnlock(id, unlocked) {
     const body = document.getElementById('ul-' + id)
     const btn  = document.getElementById('ulbtn-' + id)
@@ -50,7 +54,7 @@ function setSyncStatus(online) {
     text.textContent = online ? '동기화 연결됨' : '로컬 모드'
 }
 
-// ── Firebase / Unlock ────────────────────────────────────────
+// ── Firebase ─────────────────────────────────────────────────
 function initFirebase() {
     const configured = typeof firebaseConfig !== 'undefined'
         && firebaseConfig.apiKey
@@ -99,7 +103,6 @@ async function toggleUnlock(id) {
         const ref  = db.ref('unlocks/' + id)
         const snap = await ref.once('value')
         snap.val() ? await ref.remove() : await ref.set(true)
-        // onValue listener handles UI update
     } else {
         const body = document.getElementById('ul-' + id)
         if (!body) return
@@ -109,27 +112,25 @@ async function toggleUnlock(id) {
     }
 }
 
-// ── AS (Another Style) Toggle ────────────────────────────────
+// ── AS (Another Style) — 개별 페이지 탭 전환 ─────────────────
 const CHARS = ['nelly', 'chloe', 'yuzu', 'garnet']
+
+function setPageAS(charId, on) {
+    const page = document.getElementById('page-char-' + charId)
+    if (!page) return
+    page.setAttribute('data-as', on ? 'true' : 'false')
+    localStorage.setItem('as-' + charId, on ? 'true' : 'false')
+
+    const defTab = document.getElementById('stab-' + charId + '-def')
+    const asTab  = document.getElementById('stab-' + charId + '-as')
+    if (defTab) defTab.classList.toggle('active', !on)
+    if (asTab)  asTab.classList.toggle('active', on)
+}
 
 function initASStates() {
     CHARS.forEach(id => {
-        if (localStorage.getItem('as-' + id) === 'true') setAS(id, true)
+        if (localStorage.getItem('as-' + id) === 'true') setPageAS(id, true)
     })
-}
-
-function toggleAS(id) {
-    const card = document.getElementById('char-' + id)
-    if (!card) return
-    const next = card.getAttribute('data-as') !== 'true'
-    setAS(id, next)
-    localStorage.setItem('as-' + id, next)
-}
-
-function setAS(id, on) {
-    const card = document.getElementById('char-' + id)
-    if (!card) return
-    card.setAttribute('data-as', on ? 'true' : 'false')
 }
 
 // ── Init ─────────────────────────────────────────────────────

@@ -437,17 +437,267 @@ strong.gold  { color: var(--accent); }
 
 
 /* ═══════════════════════════════════════════════════════════
-   PARTY PAGE
+   PARTY — ROSTER OVERVIEW
 ═══════════════════════════════════════════════════════════ */
 
-.party-grid {
+.roster-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
 }
 
-/* ── Character Card ─────────────────────────────────────── */
-.char-card {
+.roster-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.15s, box-shadow 0.15s;
+}
+
+.roster-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.roster-portrait {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.roster-initial {
+    font-size: 56px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.roster-footer {
+    padding: 10px 12px 12px;
+    border-top: 1px solid var(--border-in);
+}
+
+.roster-name { font-size: 13px; color: var(--accent); font-weight: bold; }
+.roster-meta { font-size: 11px; color: var(--text-4); margin-top: 3px; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   PARTY — INDIVIDUAL CHARACTER PAGE  (나무위키 스타일)
+═══════════════════════════════════════════════════════════ */
+
+/* Style-switch tabs in page header */
+.char-page-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    color: var(--text-4);
+    font-size: 12px;
+    cursor: pointer;
+    padding: 0;
+    font-family: inherit;
+    transition: color 0.2s;
+}
+.back-btn:hover { color: var(--accent); }
+
+.style-tabs { display: flex; gap: 6px; }
+
+.stab {
+    background: none;
+    border: 1px solid var(--border);
+    color: var(--text-3);
+    padding: 4px 14px;
+    border-radius: 14px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: inherit;
+}
+.stab:hover { border-color: var(--accent); color: var(--accent); }
+.stab.active {
+    background: var(--surface-2);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* AS mode tabs */
+.page[data-as="true"] .stab.active {
+    border-color: var(--as-accent);
+    color: var(--as-accent);
+    background: var(--as-surface);
+}
+
+/* AS badge in h2 */
+.as-name-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: normal;
+    vertical-align: middle;
+    color: var(--as-accent);
+    border: 1px solid var(--as-accent);
+    padding: 1px 7px;
+    border-radius: 10px;
+    margin-left: 6px;
+}
+
+/* Article layout: infobox floats right */
+.char-article-wrap { display: flow-root; }
+
+.char-infobox {
+    float: right;
+    width: 210px;
+    margin: 0 0 20px 28px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    font-size: 12px;
+    transition: border-color 0.3s, background 0.25s;
+}
+.page[data-as="true"] .char-infobox { border-color: var(--as-accent); }
+
+.infobox-portrait {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.infobox-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; left: 0;
+}
+
+.infobox-as-badge {
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--as-accent);
+    border: 1px solid var(--as-accent);
+    padding: 2px 7px;
+    border-radius: 3px;
+}
+
+.infobox-name-block {
+    padding: 10px 12px 7px;
+    border-bottom: 1px solid var(--border-in);
+}
+
+.infobox-char-name {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--accent);
+    transition: color 0.3s;
+}
+.page[data-as="true"] .infobox-char-name { color: var(--as-accent); }
+
+.infobox-char-level { font-size: 11px; color: var(--text-4); margin-top: 2px; }
+.infobox-char-level .lv-num { color: var(--accent); font-weight: bold; }
+.page[data-as="true"] .infobox-char-level .lv-num { color: var(--as-accent); }
+
+.infobox-quote {
+    padding: 8px 12px;
+    font-size: 11.5px;
+    color: var(--text-3);
+    font-style: italic;
+    border-bottom: 1px solid var(--border-in);
+    line-height: 1.55;
+}
+
+.infobox-stats { padding: 4px 0; }
+
+.infobox-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 5px 12px;
+    border-bottom: 1px solid var(--border-in);
+    font-size: 11.5px;
+}
+.infobox-stat:last-child { border-bottom: none; }
+
+.isk { color: var(--text-4); min-width: 28px; flex-shrink: 0; }
+.isv { color: var(--text-2); }
+
+/* Article sections */
+.char-article-body { /* flows around the float */ }
+
+.article-section { margin-bottom: 28px; }
+
+.article-section-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--text-1);
+    padding-bottom: 6px;
+    border-bottom: 2px solid var(--accent);
+    margin-bottom: 12px;
+    transition: border-color 0.3s;
+}
+.page[data-as="true"] .article-section-title { border-bottom-color: var(--as-accent); }
+
+.article-content {
+    font-size: 13.5px;
+    line-height: 1.85;
+    color: var(--text-2);
+}
+
+/* Detailed profile table in article */
+.detail-table { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+.dt-row {
+    display: flex;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-in);
+}
+.dt-row:last-child { border-bottom: none; }
+.dtk {
+    padding: 7px 14px;
+    background: var(--surface-2);
+    color: var(--text-4);
+    min-width: 56px;
+    border-right: 1px solid var(--border-in);
+    flex-shrink: 0;
+    font-size: 12px;
+}
+.dtv {
+    padding: 7px 14px;
+    color: var(--text-2);
+    flex: 1;
+}
+
+/* pg-default / pg-as visibility (page-level AS) */
+.pg-as { display: none; }
+.page[data-as="true"] .pg-default { display: none; }
+.page[data-as="true"] .pg-as { display: revert; }
+
+.traits-tbd {
+    color: var(--ph);
+    font-style: italic;
+    font-size: 13px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* (구 카드형 파티 CSS 제거됨 — 개별 페이지 방식으로 전환) */
+
+.char-card-UNUSED {
     background: var(--surface);
     border: 2px solid var(--border);
     border-radius: 10px;
