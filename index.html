@@ -13,7 +13,7 @@
 <!-- ═══════════ SIDEBAR ═══════════ -->
 <aside class="sidebar">
     <div class="sidebar-brand">
-        <h1>아리안로드 아카데미<br>엔딩 파티</h1>
+        <h1>아리안로드 아카데미 엔딩 파티</h1>
         <div class="tagline">TRPG Campaign Wiki</div>
         <button class="theme-toggle" id="theme-btn" onclick="toggleTheme()">☀️ 라이트</button>
     </div>
@@ -46,16 +46,16 @@
         <div class="nav-label">용사 파티</div>
         <div class="nav-item" data-page="party" onclick="showPage('party', this)">📋 파티 개요</div>
         <div class="nav-item" data-page="char-nelly" onclick="showPage('char-nelly', this)">
-            <span class="dot" style="background:#c8a96e;"></span>넬리 가우스
+            <span class="dot" style="background:#d0d0d0;"></span>넬리 가우스
         </div>
         <div class="nav-item" data-page="char-chloe" onclick="showPage('char-chloe', this)">
-            <span class="dot" style="background:#70c8d0;"></span>클로이 벨 디아스론드
+            <span class="dot" style="background:#7ab8e8;"></span>클로이 벨 디아스론드
         </div>
         <div class="nav-item" data-page="char-yuzu" onclick="showPage('char-yuzu', this)">
-            <span class="dot" style="background:#c070d0;"></span>유즈 R 디아스타
+            <span class="dot" style="background:#70c070;"></span>유즈 R 디아스타
         </div>
         <div class="nav-item" data-page="char-garnet" onclick="showPage('char-garnet', this)">
-            <span class="dot" style="background:#d07070;"></span>가넷 에버크레스트
+            <span class="dot" style="background:#e06868;"></span>가넷 에버크레스트
         </div>
     </div>
 
@@ -78,9 +78,7 @@
 ════════════════════════════════════════════════════════ -->
 <div class="page active" id="page-home">
     <div class="home-hero">
-        <div class="home-hero-eyebrow">TRPG Campaign Wiki · 에린딜</div>
-        <h1 class="home-hero-title">아리안로드 아카데미<br>엔딩 파티</h1>
-        <p class="home-hero-sub">파편을 지닌 자들이 세계를 흔들고, 용사들이 그 흐름의 한가운데 서 있다.</p>
+        <h1 class="home-hero-title">아리안로드 아카데미 엔딩 파티</h1>
     </div>
     <div class="content">
 
@@ -88,10 +86,11 @@
             <span class="home-sec-title">용사 파티 <span class="home-sec-count">4</span></span>
             <button class="home-sec-link" onclick="showPage('party')">전체 보기 →</button>
         </div>
+
         <div class="roster-grid">
-            <div class="roster-card" style="--char-color:#c8a96e" onclick="showPage('char-nelly')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#2a2010,#1a1a08);">
-                    <img src="/img/nelly.jpg" alt="넬리 가우스" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="nelly" style="--char-color:#d0d0d0" onclick="showPage('char-nelly')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#222,#111);">
+                    <img src="/img/nelly.jpg" data-char="nelly" data-field="img_def" alt="넬리 가우스" onerror="this.style.display='none'">
                     <span class="roster-initial">넬</span>
                 </div>
                 <div class="roster-footer">
@@ -99,9 +98,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-            <div class="roster-card" style="--char-color:#70c8d0" onclick="showPage('char-chloe')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#0e1e2a,#081820);">
-                    <img src="/img/chloe.jpg" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="chloe" style="--char-color:#7ab8e8" onclick="showPage('char-chloe')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#0d1b3e,#060e20);">
+                    <img src="/img/chloe.jpg" data-char="chloe" data-field="img_def" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
                     <span class="roster-initial">클</span>
                 </div>
                 <div class="roster-footer">
@@ -109,9 +108,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-            <div class="roster-card" style="--char-color:#c070d0" onclick="showPage('char-yuzu')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#1a0e28,#12081e);">
-                    <img src="/img/yuzu.jpg" alt="유즈 R 디아스타" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="yuzu" style="--char-color:#70c070" onclick="showPage('char-yuzu')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#0d2e0d,#061806);">
+                    <img src="/img/yuzu.jpg" data-char="yuzu" data-field="img_def" alt="유즈 R 디아스타" onerror="this.style.display='none'">
                     <span class="roster-initial">유</span>
                 </div>
                 <div class="roster-footer">
@@ -119,31 +118,15 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-            <div class="roster-card" style="--char-color:#d07070" onclick="showPage('char-garnet')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#2a0e0e,#1e0808);">
-                    <img src="/img/garnet.jpg" alt="가넷 에버크레스트" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="garnet" style="--char-color:#e06868" onclick="showPage('char-garnet')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#3e0d0d,#220808);">
+                    <img src="/img/garnet.jpg" data-char="garnet" data-field="img_def" alt="가넷 에버크레스트" onerror="this.style.display='none'">
                     <span class="roster-initial">가</span>
                 </div>
                 <div class="roster-footer">
                     <div class="roster-name">가넷 에버크레스트</div>
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
-            </div>
-        </div>
-
-        <div class="home-sec-head home-sec-spaced">
-            <span class="home-sec-title">세계 현황</span>
-        </div>
-        <div class="stat-row">
-            <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">마왕 후보</div></div>
-            <div class="stat-box"><div class="stat-num">2</div><div class="stat-label">사망 확인</div></div>
-            <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">행방 불명</div></div>
-        </div>
-        <div class="card">
-            <div class="card-head"><div class="card-title">세계 개요</div></div>
-            <div class="card-body">
-                <p>에린딜에 소환된 어션들 중 일부는 <strong class="gold">마왕의 파편</strong>을 지닌 채 이 세계에 발을 딛는다. 각 파편에는 담당 사신의 권속이 깃들어 있으며, 그 힘을 받아들임으로써 마왕으로서의 각성이 이루어진다.</p>
-                <p>파편은 총 <strong class="gold">7개</strong>가 존재한다. 좌측 사이드바에서 각 마왕 후보 페이지로 이동할 수 있다.</p>
             </div>
         </div>
 
@@ -156,7 +139,6 @@
 <div class="page" id="page-fragments">
     <div class="page-header">
         <h2>마왕의 파편</h2>
-        <div class="sub">에린딜에 존재하는 마왕 후보들 — 파편 7개 수집 시 각성</div>
     </div>
     <div class="content">
         <div class="frag-grid">
@@ -224,7 +206,6 @@
     </div>
     <div class="content">
         <div class="char-article-wrap">
-
             <div class="char-infobox">
                 <div class="infobox-portrait" style="background:linear-gradient(160deg,#18182e,#0e0e1c);">
                     <img src="/img/kato.jpg" alt="카토 미노리" onerror="this.style.display='none'">
@@ -247,7 +228,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="char-article-body">
                 <div class="article-section">
                     <div class="article-section-title">인물 기록</div>
@@ -260,7 +240,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -275,7 +254,6 @@
     </div>
     <div class="content">
         <div class="char-article-wrap">
-
             <div class="char-infobox">
                 <div class="infobox-portrait" style="background:linear-gradient(160deg,#280e1e,#180810);">
                     <img src="/img/yukimori.jpg" alt="유키모리 스미레" onerror="this.style.display='none'">
@@ -298,7 +276,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="char-article-body">
                 <div class="article-section">
                     <div class="article-section-title">인물 기록</div>
@@ -311,7 +288,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -326,7 +302,6 @@
     </div>
     <div class="content">
         <div class="char-article-wrap">
-
             <div class="char-infobox">
                 <div class="infobox-portrait" style="background:linear-gradient(160deg,#220e0e,#140808);">
                     <img src="/img/morgoth.jpg" alt="모르고트" onerror="this.style.display='none'">
@@ -348,7 +323,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="char-article-body">
                 <div class="article-section">
                     <div class="article-section-title">인물 기록</div>
@@ -359,7 +333,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -374,7 +347,6 @@
     </div>
     <div class="content">
         <div class="char-article-wrap">
-
             <div class="char-infobox">
                 <div class="infobox-portrait" style="background:linear-gradient(160deg,#0e180e,#080e08);">
                     <img src="/img/kasukabe.jpg" alt="카스카베 하루" onerror="this.style.display='none'">
@@ -396,7 +368,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="char-article-body">
                 <div class="article-section">
                     <div class="article-section-title">인물 기록</div>
@@ -406,7 +377,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -421,7 +391,6 @@
     </div>
     <div class="content">
         <div class="char-article-wrap">
-
             <div class="char-infobox">
                 <div class="infobox-portrait" style="background:linear-gradient(160deg,#18180e,#100e08);">
                     <img src="/img/sato.jpg" alt="사토 다이치" onerror="this.style.display='none'">
@@ -443,7 +412,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="char-article-body">
                 <div class="article-section">
                     <div class="article-section-title">인물 기록</div>
@@ -455,7 +423,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
 </div>
@@ -466,13 +433,12 @@
 <div class="page" id="page-party">
     <div class="page-header">
         <h2>용사 파티</h2>
-        <div class="sub">아리안로드 아카데미를 무대로 활동하는 PC 파티 — 카드를 클릭하면 개인 페이지로 이동</div>
     </div>
     <div class="content">
         <div class="roster-grid">
-            <div class="roster-card" style="--char-color:#c8a96e" onclick="showPage('char-nelly')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#2a2010,#1a1a08);">
-                    <img src="/img/nelly.jpg" alt="넬리 가우스" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="nelly" style="--char-color:#d0d0d0" onclick="showPage('char-nelly')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#222,#111);">
+                    <img src="/img/nelly.jpg" data-char="nelly" data-field="img_def" alt="넬리 가우스" onerror="this.style.display='none'">
                     <span class="roster-initial">넬</span>
                 </div>
                 <div class="roster-footer">
@@ -480,9 +446,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-            <div class="roster-card" style="--char-color:#70c8d0" onclick="showPage('char-chloe')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#0e1e2a,#081820);">
-                    <img src="/img/chloe.jpg" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="chloe" style="--char-color:#7ab8e8" onclick="showPage('char-chloe')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#0d1b3e,#060e20);">
+                    <img src="/img/chloe.jpg" data-char="chloe" data-field="img_def" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
                     <span class="roster-initial">클</span>
                 </div>
                 <div class="roster-footer">
@@ -490,9 +456,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-            <div class="roster-card" style="--char-color:#c070d0" onclick="showPage('char-yuzu')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#1a0e28,#12081e);">
-                    <img src="/img/yuzu.jpg" alt="유즈 R 디아스타" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="yuzu" style="--char-color:#70c070" onclick="showPage('char-yuzu')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#0d2e0d,#061806);">
+                    <img src="/img/yuzu.jpg" data-char="yuzu" data-field="img_def" alt="유즈 R 디아스타" onerror="this.style.display='none'">
                     <span class="roster-initial">유</span>
                 </div>
                 <div class="roster-footer">
@@ -500,9 +466,9 @@
                     <div class="roster-meta">Lv. — · 직업 미상</div>
                 </div>
             </div>
-            <div class="roster-card" style="--char-color:#d07070" onclick="showPage('char-garnet')">
-                <div class="roster-portrait" style="background:linear-gradient(160deg,#2a0e0e,#1e0808);">
-                    <img src="/img/garnet.jpg" alt="가넷 에버크레스트" onerror="this.style.display='none'">
+            <div class="roster-card" data-char="garnet" style="--char-color:#e06868" onclick="showPage('char-garnet')">
+                <div class="roster-portrait" style="background:linear-gradient(160deg,#3e0d0d,#220808);">
+                    <img src="/img/garnet.jpg" data-char="garnet" data-field="img_def" alt="가넷 에버크레스트" onerror="this.style.display='none'">
                     <span class="roster-initial">가</span>
                 </div>
                 <div class="roster-footer">
@@ -516,14 +482,19 @@
 
 <!-- ════════════════════════════════════════════════════════
      넬리 가우스 — 개별 페이지
+     테마: 검은색 / #d0d0d0 silver
 ════════════════════════════════════════════════════════ -->
-<div class="page" id="page-char-nelly" data-as="false">
+<div class="page char-themed" id="page-char-nelly" data-as="false"
+     style="--ct-accent:#d0d0d0;--ct-border:#404040;">
   <div class="page-header">
     <div class="char-page-top">
       <button class="back-btn" onclick="showPage('party')">← 파티 목록</button>
-      <div class="style-tabs">
-        <button class="stab active" id="stab-nelly-def" onclick="setPageAS('nelly', false)">기본 스타일</button>
-        <button class="stab" id="stab-nelly-as" onclick="setPageAS('nelly', true)">◈ Another Style</button>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="edit-char-btn" onclick="openEditPanel('nelly')">✎ 편집</button>
+        <div class="style-tabs">
+          <button class="stab active" id="stab-nelly-def" onclick="setPageAS('nelly', false)">기본 스타일</button>
+          <button class="stab" id="stab-nelly-as" onclick="setPageAS('nelly', true)">◈ Another Style</button>
+        </div>
       </div>
     </div>
     <h2>넬리 가우스 <span class="as-name-badge pg-as">A.S</span></h2>
@@ -534,59 +505,57 @@
     <div class="char-article-wrap">
       <div class="char-infobox">
         <div class="pg-default">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#2a2010,#1a1a08);">
-            <img src="/img/nelly.jpg" alt="넬리 가우스" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#c8a96e;">넬</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1e1e1e,#111);">
+            <img src="/img/nelly.jpg" data-char="nelly" data-field="img_def" alt="넬리 가우스" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">넬</span>
           </div>
         </div>
         <div class="pg-as">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
-            <img src="/img/nelly-as.jpg" alt="넬리 가우스 A.S" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#8888dd;">넬</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#2a2a2a,#181818);">
+            <img src="/img/nelly-as.jpg" data-char="nelly" data-field="img_as" alt="넬리 가우스 A.S" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">넬</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
         </div>
         <div class="infobox-name-block">
           <div class="infobox-char-name">넬리 가우스</div>
-          <div class="infobox-char-level">Lv. <span class="lv-num">—</span></div>
+          <div class="infobox-char-level">Lv. <span class="lv-num" data-char="nelly" data-field="level">—</span></div>
         </div>
         <div class="infobox-quote">
-          <div class="pg-default">"..."</div>
-          <div class="pg-as">"..."</div>
+          <div class="pg-default" data-char="nelly" data-field="quote_def">"..."</div>
+          <div class="pg-as" data-char="nelly" data-field="quote_as">"..."</div>
         </div>
         <div class="infobox-stats">
-          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">종족</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">나이</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">출신</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
+          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default" data-char="nelly" data-field="job_def">—</span><span class="isv pg-as" data-char="nelly" data-field="job_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">종족</span><span class="isv" data-char="nelly" data-field="race">—</span></div>
+          <div class="infobox-stat"><span class="isk">나이</span><span class="isv" data-char="nelly" data-field="age">—</span></div>
+          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default" data-char="nelly" data-field="affil_def">—</span><span class="isv pg-as" data-char="nelly" data-field="affil_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">출신</span><span class="isv" data-char="nelly" data-field="origin">—</span></div>
         </div>
       </div>
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
-          <div class="article-content pg-default">— 인물 소개란 —</div>
-          <div class="article-content pg-as">— Another Style 소개란 —</div>
+          <div class="article-content pg-default" data-char="nelly" data-field="intro_def">— 인물 소개란 —</div>
+          <div class="article-content pg-as" data-char="nelly" data-field="intro_as">— Another Style 소개란 —</div>
         </div>
         <div class="article-section">
           <div class="article-section-title">인적사항</div>
           <div class="pg-default">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">출신</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">무기</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="nelly" data-field="job_def">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="nelly" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="nelly" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="nelly" data-field="affil_def">—</span></div>
+              <div class="dt-row"><span class="dtk">출신</span><span class="dtv" data-char="nelly" data-field="origin">—</span></div>
             </div>
           </div>
           <div class="pg-as">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="nelly" data-field="job_as">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="nelly" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="nelly" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="nelly" data-field="affil_as">—</span></div>
             </div>
           </div>
         </div>
@@ -601,14 +570,19 @@
 
 <!-- ════════════════════════════════════════════════════════
      클로이 벨 디아스론드 — 개별 페이지
+     테마: 군청색 / #7ab8e8 sky blue
 ════════════════════════════════════════════════════════ -->
-<div class="page" id="page-char-chloe" data-as="false">
+<div class="page char-themed" id="page-char-chloe" data-as="false"
+     style="--ct-accent:#7ab8e8;--ct-border:#1e3a7a;">
   <div class="page-header">
     <div class="char-page-top">
       <button class="back-btn" onclick="showPage('party')">← 파티 목록</button>
-      <div class="style-tabs">
-        <button class="stab active" id="stab-chloe-def" onclick="setPageAS('chloe', false)">기본 스타일</button>
-        <button class="stab" id="stab-chloe-as" onclick="setPageAS('chloe', true)">◈ Another Style</button>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="edit-char-btn" onclick="openEditPanel('chloe')">✎ 편집</button>
+        <div class="style-tabs">
+          <button class="stab active" id="stab-chloe-def" onclick="setPageAS('chloe', false)">기본 스타일</button>
+          <button class="stab" id="stab-chloe-as" onclick="setPageAS('chloe', true)">◈ Another Style</button>
+        </div>
       </div>
     </div>
     <h2>클로이 벨 디아스론드 <span class="as-name-badge pg-as">A.S</span></h2>
@@ -619,59 +593,57 @@
     <div class="char-article-wrap">
       <div class="char-infobox">
         <div class="pg-default">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#0e1e2a,#081820);">
-            <img src="/img/chloe.jpg" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#70c8d0;">클</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#0d1b3e,#060e20);">
+            <img src="/img/chloe.jpg" data-char="chloe" data-field="img_def" alt="클로이 벨 디아스론드" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">클</span>
           </div>
         </div>
         <div class="pg-as">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
-            <img src="/img/chloe-as.jpg" alt="클로이 A.S" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#8888dd;">클</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a2e54,#0e1830);">
+            <img src="/img/chloe-as.jpg" data-char="chloe" data-field="img_as" alt="클로이 A.S" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">클</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
         </div>
         <div class="infobox-name-block">
           <div class="infobox-char-name">클로이 벨 디아스론드</div>
-          <div class="infobox-char-level">Lv. <span class="lv-num">—</span></div>
+          <div class="infobox-char-level">Lv. <span class="lv-num" data-char="chloe" data-field="level">—</span></div>
         </div>
         <div class="infobox-quote">
-          <div class="pg-default">"..."</div>
-          <div class="pg-as">"..."</div>
+          <div class="pg-default" data-char="chloe" data-field="quote_def">"..."</div>
+          <div class="pg-as" data-char="chloe" data-field="quote_as">"..."</div>
         </div>
         <div class="infobox-stats">
-          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">종족</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">나이</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">출신</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
+          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default" data-char="chloe" data-field="job_def">—</span><span class="isv pg-as" data-char="chloe" data-field="job_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">종족</span><span class="isv" data-char="chloe" data-field="race">—</span></div>
+          <div class="infobox-stat"><span class="isk">나이</span><span class="isv" data-char="chloe" data-field="age">—</span></div>
+          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default" data-char="chloe" data-field="affil_def">—</span><span class="isv pg-as" data-char="chloe" data-field="affil_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">출신</span><span class="isv" data-char="chloe" data-field="origin">—</span></div>
         </div>
       </div>
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
-          <div class="article-content pg-default">— 인물 소개란 —</div>
-          <div class="article-content pg-as">— Another Style 소개란 —</div>
+          <div class="article-content pg-default" data-char="chloe" data-field="intro_def">— 인물 소개란 —</div>
+          <div class="article-content pg-as" data-char="chloe" data-field="intro_as">— Another Style 소개란 —</div>
         </div>
         <div class="article-section">
           <div class="article-section-title">인적사항</div>
           <div class="pg-default">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">출신</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">무기</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="chloe" data-field="job_def">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="chloe" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="chloe" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="chloe" data-field="affil_def">—</span></div>
+              <div class="dt-row"><span class="dtk">출신</span><span class="dtv" data-char="chloe" data-field="origin">—</span></div>
             </div>
           </div>
           <div class="pg-as">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="chloe" data-field="job_as">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="chloe" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="chloe" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="chloe" data-field="affil_as">—</span></div>
             </div>
           </div>
         </div>
@@ -686,14 +658,19 @@
 
 <!-- ════════════════════════════════════════════════════════
      유즈 R 디아스타 — 개별 페이지
+     테마: 녹색 / #70c070 forest green
 ════════════════════════════════════════════════════════ -->
-<div class="page" id="page-char-yuzu" data-as="false">
+<div class="page char-themed" id="page-char-yuzu" data-as="false"
+     style="--ct-accent:#70c070;--ct-border:#206020;">
   <div class="page-header">
     <div class="char-page-top">
       <button class="back-btn" onclick="showPage('party')">← 파티 목록</button>
-      <div class="style-tabs">
-        <button class="stab active" id="stab-yuzu-def" onclick="setPageAS('yuzu', false)">기본 스타일</button>
-        <button class="stab" id="stab-yuzu-as" onclick="setPageAS('yuzu', true)">◈ Another Style</button>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="edit-char-btn" onclick="openEditPanel('yuzu')">✎ 편집</button>
+        <div class="style-tabs">
+          <button class="stab active" id="stab-yuzu-def" onclick="setPageAS('yuzu', false)">기본 스타일</button>
+          <button class="stab" id="stab-yuzu-as" onclick="setPageAS('yuzu', true)">◈ Another Style</button>
+        </div>
       </div>
     </div>
     <h2>유즈 R 디아스타 <span class="as-name-badge pg-as">A.S</span></h2>
@@ -704,59 +681,57 @@
     <div class="char-article-wrap">
       <div class="char-infobox">
         <div class="pg-default">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a0e28,#12081e);">
-            <img src="/img/yuzu.jpg" alt="유즈 R 디아스타" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#c070d0;">유</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#0d2e0d,#061806);">
+            <img src="/img/yuzu.jpg" data-char="yuzu" data-field="img_def" alt="유즈 R 디아스타" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">유</span>
           </div>
         </div>
         <div class="pg-as">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
-            <img src="/img/yuzu-as.jpg" alt="유즈 A.S" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#8888dd;">유</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1e3e1e,#0e2e0e);">
+            <img src="/img/yuzu-as.jpg" data-char="yuzu" data-field="img_as" alt="유즈 A.S" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">유</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
         </div>
         <div class="infobox-name-block">
           <div class="infobox-char-name">유즈 R 디아스타</div>
-          <div class="infobox-char-level">Lv. <span class="lv-num">—</span></div>
+          <div class="infobox-char-level">Lv. <span class="lv-num" data-char="yuzu" data-field="level">—</span></div>
         </div>
         <div class="infobox-quote">
-          <div class="pg-default">"..."</div>
-          <div class="pg-as">"..."</div>
+          <div class="pg-default" data-char="yuzu" data-field="quote_def">"..."</div>
+          <div class="pg-as" data-char="yuzu" data-field="quote_as">"..."</div>
         </div>
         <div class="infobox-stats">
-          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">종족</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">나이</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">출신</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
+          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default" data-char="yuzu" data-field="job_def">—</span><span class="isv pg-as" data-char="yuzu" data-field="job_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">종족</span><span class="isv" data-char="yuzu" data-field="race">—</span></div>
+          <div class="infobox-stat"><span class="isk">나이</span><span class="isv" data-char="yuzu" data-field="age">—</span></div>
+          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default" data-char="yuzu" data-field="affil_def">—</span><span class="isv pg-as" data-char="yuzu" data-field="affil_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">출신</span><span class="isv" data-char="yuzu" data-field="origin">—</span></div>
         </div>
       </div>
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
-          <div class="article-content pg-default">— 인물 소개란 —</div>
-          <div class="article-content pg-as">— Another Style 소개란 —</div>
+          <div class="article-content pg-default" data-char="yuzu" data-field="intro_def">— 인물 소개란 —</div>
+          <div class="article-content pg-as" data-char="yuzu" data-field="intro_as">— Another Style 소개란 —</div>
         </div>
         <div class="article-section">
           <div class="article-section-title">인적사항</div>
           <div class="pg-default">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">출신</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">무기</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="yuzu" data-field="job_def">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="yuzu" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="yuzu" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="yuzu" data-field="affil_def">—</span></div>
+              <div class="dt-row"><span class="dtk">출신</span><span class="dtv" data-char="yuzu" data-field="origin">—</span></div>
             </div>
           </div>
           <div class="pg-as">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="yuzu" data-field="job_as">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="yuzu" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="yuzu" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="yuzu" data-field="affil_as">—</span></div>
             </div>
           </div>
         </div>
@@ -771,14 +746,19 @@
 
 <!-- ════════════════════════════════════════════════════════
      가넷 에버크레스트 — 개별 페이지
+     테마: 붉은색 / #e06868 crimson
 ════════════════════════════════════════════════════════ -->
-<div class="page" id="page-char-garnet" data-as="false">
+<div class="page char-themed" id="page-char-garnet" data-as="false"
+     style="--ct-accent:#e06868;--ct-border:#7a2828;">
   <div class="page-header">
     <div class="char-page-top">
       <button class="back-btn" onclick="showPage('party')">← 파티 목록</button>
-      <div class="style-tabs">
-        <button class="stab active" id="stab-garnet-def" onclick="setPageAS('garnet', false)">기본 스타일</button>
-        <button class="stab" id="stab-garnet-as" onclick="setPageAS('garnet', true)">◈ Another Style</button>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button class="edit-char-btn" onclick="openEditPanel('garnet')">✎ 편집</button>
+        <div class="style-tabs">
+          <button class="stab active" id="stab-garnet-def" onclick="setPageAS('garnet', false)">기본 스타일</button>
+          <button class="stab" id="stab-garnet-as" onclick="setPageAS('garnet', true)">◈ Another Style</button>
+        </div>
       </div>
     </div>
     <h2>가넷 에버크레스트 <span class="as-name-badge pg-as">A.S</span></h2>
@@ -789,59 +769,57 @@
     <div class="char-article-wrap">
       <div class="char-infobox">
         <div class="pg-default">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#2a0e0e,#1e0808);">
-            <img src="/img/garnet.jpg" alt="가넷 에버크레스트" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#d07070;">가</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#3e0d0d,#220808);">
+            <img src="/img/garnet.jpg" data-char="garnet" data-field="img_def" alt="가넷 에버크레스트" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">가</span>
           </div>
         </div>
         <div class="pg-as">
-          <div class="infobox-portrait" style="background:linear-gradient(160deg,#1a1835,#0e0e22);">
-            <img src="/img/garnet-as.jpg" alt="가넷 A.S" onerror="this.style.display='none'">
-            <span style="font-size:64px;font-weight:700;color:#8888dd;">가</span>
+          <div class="infobox-portrait" style="background:linear-gradient(160deg,#4e1818,#2e0e0e);">
+            <img src="/img/garnet-as.jpg" data-char="garnet" data-field="img_as" alt="가넷 A.S" onerror="this.style.display='none'">
+            <span style="font-size:64px;font-weight:700;color:var(--ct-accent);">가</span>
             <div class="infobox-as-badge">Another Style</div>
           </div>
         </div>
         <div class="infobox-name-block">
           <div class="infobox-char-name">가넷 에버크레스트</div>
-          <div class="infobox-char-level">Lv. <span class="lv-num">—</span></div>
+          <div class="infobox-char-level">Lv. <span class="lv-num" data-char="garnet" data-field="level">—</span></div>
         </div>
         <div class="infobox-quote">
-          <div class="pg-default">"..."</div>
-          <div class="pg-as">"..."</div>
+          <div class="pg-default" data-char="garnet" data-field="quote_def">"..."</div>
+          <div class="pg-as" data-char="garnet" data-field="quote_as">"..."</div>
         </div>
         <div class="infobox-stats">
-          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">종족</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">나이</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
-          <div class="infobox-stat"><span class="isk">출신</span><span class="isv">—</span></div>
-          <div class="infobox-stat"><span class="isk">무기</span><span class="isv pg-default">—</span><span class="isv pg-as">—</span></div>
+          <div class="infobox-stat"><span class="isk">직업</span><span class="isv pg-default" data-char="garnet" data-field="job_def">—</span><span class="isv pg-as" data-char="garnet" data-field="job_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">종족</span><span class="isv" data-char="garnet" data-field="race">—</span></div>
+          <div class="infobox-stat"><span class="isk">나이</span><span class="isv" data-char="garnet" data-field="age">—</span></div>
+          <div class="infobox-stat"><span class="isk">소속</span><span class="isv pg-default" data-char="garnet" data-field="affil_def">—</span><span class="isv pg-as" data-char="garnet" data-field="affil_as">—</span></div>
+          <div class="infobox-stat"><span class="isk">출신</span><span class="isv" data-char="garnet" data-field="origin">—</span></div>
         </div>
       </div>
       <div class="char-article-body">
         <div class="article-section">
           <div class="article-section-title">소개</div>
-          <div class="article-content pg-default">— 인물 소개란 —</div>
-          <div class="article-content pg-as">— Another Style 소개란 —</div>
+          <div class="article-content pg-default" data-char="garnet" data-field="intro_def">— 인물 소개란 —</div>
+          <div class="article-content pg-as" data-char="garnet" data-field="intro_as">— Another Style 소개란 —</div>
         </div>
         <div class="article-section">
           <div class="article-section-title">인적사항</div>
           <div class="pg-default">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">출신</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">무기</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="garnet" data-field="job_def">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="garnet" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="garnet" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="garnet" data-field="affil_def">—</span></div>
+              <div class="dt-row"><span class="dtk">출신</span><span class="dtv" data-char="garnet" data-field="origin">—</span></div>
             </div>
           </div>
           <div class="pg-as">
             <div class="detail-table">
-              <div class="dt-row"><span class="dtk">직업</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">종족</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">나이</span><span class="dtv">—</span></div>
-              <div class="dt-row"><span class="dtk">소속</span><span class="dtv">—</span></div>
+              <div class="dt-row"><span class="dtk">직업</span><span class="dtv" data-char="garnet" data-field="job_as">—</span></div>
+              <div class="dt-row"><span class="dtk">종족</span><span class="dtv" data-char="garnet" data-field="race">—</span></div>
+              <div class="dt-row"><span class="dtk">나이</span><span class="dtv" data-char="garnet" data-field="age">—</span></div>
+              <div class="dt-row"><span class="dtk">소속</span><span class="dtv" data-char="garnet" data-field="affil_as">—</span></div>
             </div>
           </div>
         </div>
